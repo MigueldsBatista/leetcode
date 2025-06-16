@@ -1,3 +1,0 @@
-pop() and insert() operations are O(n) each
-reduce() is called n times, each taking O(n)
-Overall complexity: O(n²)

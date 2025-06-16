@@ -18,3 +18,5 @@ f = lambda x : x + 2
 # nomes = ['Ana', 'Bruno', 'Carlos']
 # ordenado = sorted(nomes, key=lambda nome: nome[-1])
 # print(ordenado)  # ['Ana', 'Bruno', 'Carlos'] → ordenado pelo último caractere
+
+# pop() and insert(), reduce() etc... operations increase the complexity by O(n) each
