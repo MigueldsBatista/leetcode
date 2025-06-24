@@ -45,6 +45,9 @@ Kid 4: 3 + 3 = 6 candies
 - Result: True
 
 Final Output: [True, True, True, False, True]
+
+#TODO find a better solution than using filter because its expansive
+
 """
 
 class Solution:
