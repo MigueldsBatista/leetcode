@@ -27,6 +27,7 @@ a área geralmente vai ser o minimo entre esquerda e direita vezes o eixo X
 
 NOTE: lembrar do outro problema
  
+TODO
 """
 
 
