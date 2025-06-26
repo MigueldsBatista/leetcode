@@ -22,6 +22,8 @@ TODO: good problem to solve periodically
 
 
 """
+sets = []
+sets.index()
 
 class Solution:
     def increasingTriplet(self, nums: list[int]) -> bool:
