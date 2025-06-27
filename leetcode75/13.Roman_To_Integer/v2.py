@@ -54,29 +54,15 @@ class Solution:
             'D': 500,
             'M': 1000
         }
-        prev = ''
+        prev = 0
         result = 0
-        for i in range(len(s)):
-            alg = s[i]
-            number = mapping.get(alg)
-            result += number
-            
-            # Create three booleans for subtraction cases
-            is_iv_or_ix = alg in ['X', 'V'] and prev == 'I'
-            is_xl_or_xc = alg in ['L', 'C'] and prev == 'X'
-            is_cd_or_cm = alg in ['D', 'M'] and prev == 'C'
-            
-            # Evaluate the booleans
-            if is_iv_or_ix or is_xl_or_xc or is_cd_or_cm:
-                result -= mapping.get(prev) * 2
-                
-            prev = alg
+        for roman in reversed(s):
+            value = mapping.get(roman)
+            if value < prev:
+                result -= value
+            else:
+                result += value
+    
+            prev = value
 
         return result
-
-
-s = "MCMXCIV"
-# Output: 1994
-
-res = Solution().romanToInt(s)
-print(res)
