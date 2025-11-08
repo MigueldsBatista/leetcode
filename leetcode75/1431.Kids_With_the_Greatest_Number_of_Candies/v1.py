@@ -46,7 +46,7 @@ Kid 4: 3 + 3 = 6 candies
 
 Final Output: [True, True, True, False, True]
 
-#TODO find a better solution than using filter because its expansive
+#TODO X find a better solution than using filter because its expansive
 
 """
 

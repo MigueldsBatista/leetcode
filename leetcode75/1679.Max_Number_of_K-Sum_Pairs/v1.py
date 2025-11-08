@@ -87,17 +87,20 @@ class Solution:
         
         # Step 3: Use two pointers to find pairs summing to k
         while left < right:
-            sum_val = nums[left] + nums[right]  # Current pair sum
-            
-            # Step 4: Adjust pointers based on sum comparison
-            if sum_val == k:
-                count += 1      # Found valid pair
-                left += 1       # Move left pointer right
-                right -= 1      # Move right pointer left
-            elif sum_val < k:
-                left += 1       # Need larger sum, move left right
+            candidate = nums[left] + nums[right]  # Current pair sum
+            if candidate == k:
+                count += 1
+                left += 1
+                right -= 1
+
+            # 1, 2, 3, 4, 5, 6
+            # soma ta muito grande, logo precisamos diminuir o ponteiro da 
+            # direita
+            if candidate > k:
+                right -= 1
             else:
-                right -= 1      # Need smaller sum, move right left
+                left += 1
+
         
         return count
 

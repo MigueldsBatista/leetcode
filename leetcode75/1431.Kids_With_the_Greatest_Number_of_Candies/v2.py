@@ -44,7 +44,7 @@ class Solution:
         # Step 2: Check each kid using list comprehension
         # Kid i can have the greatest if: candies[i] + extraCandies >= max_candie
         # Rearranged: candies[i] >= max_candie - extraCandies
-        return [i >= max_candie - extraCandies for i in candies]
+        return [kid_candies + extraCandies >= max_candie for kid_candies in candies]
 
 
 # Test the optimized solution

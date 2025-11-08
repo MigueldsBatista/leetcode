@@ -25,4 +25,4 @@ strs[i] consists of only lowercase English letters if it is non-empty.
 
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
-        
+        for i in range(len(strs)):
